@@ -1,0 +1,25 @@
+# trace21.txt - Tests running multiple commands in background and foreground
+#
+
+# Running command in the foreground
+/bin/echo -e tsh\076 /bin/echo Running in foreground again
+/bin/echo Running in foreground again
+
+# Running command in the background
+/bin/echo -e tsh\076 /bin/sleep 6 \046
+/bin/sleep 6 &
+
+# Running another command in the background
+/bin/echo -e tsh\076 /bin/sleep 11 \046
+/bin/sleep 11 &
+
+/bin/echo -e tsh\076 jobs
+jobs
+
+# Bring the first background job to foreground
+/bin/echo -e tsh\076 fg \%1
+fg %1
+
+# List the current jobs
+/bin/echo -e tsh\076 jobs
+jobs

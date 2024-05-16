@@ -1,0 +1,15 @@
+#
+# trace20.txt - Builtin commands ignore &
+#
+
+./mystop 10 &
+# stop background process
+bg %1 &
+# jobs prints list
+jobs &
+
+# move background process to foreground
+fg %1 &
+
+# quits terminal
+quit &

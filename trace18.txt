@@ -1,0 +1,15 @@
+#
+# trace18.txt - Test pipelines
+#
+
+# simple example
+/bin/echo 1 | wc
+
+# large example
+/bin/echo 1 | /bin/echo 2 | /bin/ps t
+
+# command fails
+/bin/echo 1 | /bin/ech 2 | wc
+
+# background job
+./mystop 5 | echo 1 &

@@ -1,0 +1,14 @@
+#
+# trace19.txt - Test manifest constants. Set MAXLINE = 15, MAXARGS = 2, and MAXJOBS = 1.
+#
+
+# cut to ./mystop 001
+./mystop 000122
+
+# no usage warning
+./mystop 1 2
+
+# shows only one job
+./myint 5 &
+./myint 5 &
+jobs
